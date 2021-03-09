@@ -12,6 +12,9 @@ import THEOplayerSDK
 
 class GlobalPlayer {
     static let sharedInstance = GlobalPlayer()
+    
+    static let environmentKey = "ov4u9j9051f5t9t6f3eol9t3q"
+    static let streamUrl = "https://stream.mux.com/mGtoZHVQht2V0200uIklebTZ00WaZ5sHMGZ8Grs1SYlvdA.m3u8"
 
     var player: THEOplayer!
     var parentView: UIView?
@@ -22,13 +25,13 @@ class GlobalPlayer {
         self.player = THEOplayer(configuration: THEOplayerConfiguration(chromeless: false))
 
         let typedSource = TypedSource(
-            src: "https://stream.mux.com/mGtoZHVQht2V0200uIklebTZ00WaZ5sHMGZ8Grs1SYlvdA.m3u8",
+            src: GlobalPlayer.streamUrl,
             type: "application/vnd.apple.mpegurl")
         let source = SourceDescription(source: typedSource, ads: nil, textTracks: nil, poster: nil, analytics: nil, metadata: nil)
         self.player.source = source
 
         // TODO: Add your env key
-        let playerData = MUXSDKCustomerPlayerData(environmentKey: "ov4u9j9051f5t9t6f3eol9t3q")!
+        let playerData = MUXSDKCustomerPlayerData(environmentKey: GlobalPlayer.environmentKey)!
 
         let videoData = MUXSDKCustomerVideoData()
         videoData.videoTitle = "This is a test video"
