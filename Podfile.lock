@@ -1,0 +1,20 @@
+PODS:
+  - Mux-Stats-Core (2.4.1)
+  - Mux-Stats-THEOplayer (0.4.1):
+    - Mux-Stats-Core (~> 2.3)
+
+DEPENDENCIES:
+  - Mux-Stats-THEOplayer (~> 0.3)
+
+SPEC REPOS:
+  trunk:
+    - Mux-Stats-Core
+    - Mux-Stats-THEOplayer
+
+SPEC CHECKSUMS:
+  Mux-Stats-Core: 0974bcd43bcf16d7ba07518f07001ba5c33749db
+  Mux-Stats-THEOplayer: 50a53a72dbf7adfdbbc3fa34f8cc45832141be3e
+
+PODFILE CHECKSUM: 35b88692dcdf855197421fcd7c8d1ced959d22eb
+
+COCOAPODS: 1.10.1
